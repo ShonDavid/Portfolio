@@ -1,0 +1,153 @@
+.paragraphStyleHeading {
+  font-size: 3vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text-style-my-projects{
+  font-size: 8vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  color: white;
+  mix-blend-mode: screen;
+}
+
+.child-project::before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1vw;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+
+.parent-project:hover .child-project:before,
+.parent-project:focus .child-project:before {
+  display: block;
+}
+
+.parent-project {
+  cursor: pointer;
+  width: 25vw;
+  height: 17vw;
+}
+
+.child-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1vw;
+  background-color: black; /* fallback color */
+  background-position: center;
+  background-size: cover;
+  transition: all .5s;
+}
+
+.parent-project:hover .child-project,
+.parent-project:focus .child-project {
+  transform: scale(1.2);
+}
+
+a {
+  font-size: 3vw;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+}
+
+.my-projects-container{
+
+  height: 160vh;
+}
+
+.background-my-projects{
+  width: 100%;
+  height: 100%;
+  background: url("wallpaper2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*For Mobile Only*/
+@media only screen and (max-width: 1200px) {
+  .paragraphStyleHeading {
+    font-size: 8vw;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-align: center;
+    color: white;
+  }
+
+  .flexContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .text-style-my-projects{
+    font-size: 14vw;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-align: center;
+    color: white;
+    mix-blend-mode: screen;
+  }
+
+  .child-project::before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1vw;
+    background-color: rgba(52, 73, 94, 0.75);
+    cursor: pointer;
+  }
+
+  .parent-project:hover .child-project:before,
+  .parent-project:focus .child-project:before {
+    display: block;
+  }
+
+  .parent-project {
+    width: 80vw;
+    height: 24vh;
+    margin: 3vw;
+  }
+
+  .child-project {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw;
+    background-color: black; /* fallback color */
+    background-position: center;
+    background-size: cover;
+    transition: all .5s;
+  }
+
+  a {
+    font-size: 10vw;
+  }
+
+  .my-projects-container{
+    padding: 3%;
+    height: 100%;
+    width: 95%;
+  }
+}

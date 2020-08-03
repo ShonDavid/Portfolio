@@ -1,0 +1,115 @@
+.modal-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 27, 0.6);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    position: fixed;
+    z-index: 11;
+    justify-content: center;
+}
+
+.modal-block{
+    align-self: center;
+    display: flex;
+    align-content: center;
+    border-radius: 5px;
+    width: 60vw;
+    height: 60vh;
+    flex-direction: column;
+    background-color: white;
+}
+
+.button-close{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    font-size: 20px;
+    transition-duration: 0.3s;
+}
+
+.button-close:hover {
+    color: red;
+}
+
+.button-container{
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-body-container{
+    overflow: hidden;
+    overflow-y:auto;
+    width: 100%;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 2px;
+}
+
+#title{
+    width: 100%;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 25px;
+    height: 30px;
+    border-bottom: 3px double lightgray;
+}
+
+#text-body{
+    text-align: left;
+    font-family: Calibri;
+    font-size: 20px;
+}
+
+.button-click {
+    background-color: white;
+    font-family: Calibri;
+    width: 15vw;
+    font-size: 18px;
+    border: 1px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.button-click:hover {
+    color: white;
+    background-color: black;
+}
+
+.buttons-container{
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-self: flex-end;
+    align-content: center;
+    justify-content: space-around;
+    padding-bottom: 4px;
+}
+
+.space-mobile{
+    padding: 2px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .button-click {
+        width: 90%;
+    }
+
+    .buttons-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        padding-bottom: 4px;
+    }
+}
