@@ -31,7 +31,7 @@ class Modal extends Component {
               className="button-click"
               onClick={() => window.open(this.props.github, "_blank")}
             >
-              Github Rep
+              Source Code
             </button>
             <div className="space-mobile" />
             <button

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./myprojects.css";
-import TicTacToe from "../projects/tictactoe.jpg";
 import Catan from "../projects/catan.jpg";
+import Sudoku from "../projects/sudoku.jpg";
 
 class MyProjects extends Component {
   constructor(props) {
@@ -39,6 +39,41 @@ class MyProjects extends Component {
         <b>I hope you'll enjoy playing at least as much as I do!</b>
       </text>
     );
+
+    let textForSudoku = (
+      <text id="text-body">
+        For those who don’t know how to solve a sudoku,
+        <br /> Each row, column, and square (9 spaces each) needs to be filled
+        out with the numbers 1-9,
+        <br /> without repeating any numbers within the row, column, or square.
+        <br />
+        <br /> <b>
+          These are all the features my game has to offer:
+        </b> <br /> -there is a generator for a sudoku board, meaning the amount
+        of the sudoku boards are endless.
+        <br /> -you can press on the buttons easy/medium/hard below the board to
+        show a new board with the difficulty level you have chosen.
+        <br /> -to fill the blank areas efficiently, you’ll have to click on one
+        of them, press a number between 1-9, and for last press “Enter”.
+        <br /> -if you filled the blank area correctly, the number will be shown
+        in green color, else, in red color.
+        <br />
+        -There is a score for solving the game. <br />
+        -The highest score is 1000/2000/3000 depends on the difficulty level
+        easy/medium/hard you have chosen.
+        <br /> -When all the board is solved correctly, you will get a beautiful
+        animation with the score you achieved.
+        <br /> -The game is also for mobile.
+        <br />
+        <br />
+        <b>
+          Thank you for your support!
+          <br /> If you have any notes and want to contact me, you can find the
+          information down below.{" "}
+        </b>
+      </text>
+    );
+
     return (
       <div className="background-my-projects">
         <div className="my-projects-container">
@@ -62,7 +97,18 @@ class MyProjects extends Component {
                 "Catan Board",
                 textForCatan,
                 "https://catan-b558a.web.app/",
-                ""
+                "https://github.com/ShonDavid/CatanBoard"
+              )
+            )}
+          </div>
+
+          <div className="flexContainer">
+            {projectImg(Sudoku, "Sudoku game", () =>
+              this.props.handleModal(
+                "Sudoku game",
+                textForSudoku,
+                "https://sudoku-shani.web.app/",
+                "https://github.com/ShonDavid/sudoku-board"
               )
             )}
           </div>
